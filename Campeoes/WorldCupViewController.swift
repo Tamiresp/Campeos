@@ -22,6 +22,8 @@ class WorldCupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = worldCup.winner
 
         ivWinner.image = UIImage(named: worldCup.winner)
         ivVice.image = UIImage(named: worldCup.vice)
