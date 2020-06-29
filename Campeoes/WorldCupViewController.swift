@@ -24,7 +24,6 @@ class WorldCupViewController: UIViewController {
         super.viewDidLoad()
         
         title = worldCup.winner
-
         ivWinner.image = UIImage(named: worldCup.winner)
         ivVice.image = UIImage(named: worldCup.vice)
         lbScore.text = "\(worldCup.winnerScore) x \(worldCup.viceScore)"
