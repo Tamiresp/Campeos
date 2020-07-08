@@ -20,6 +20,10 @@
 		78811167249AF00000478CDC /* WorldCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78811166249AF00000478CDC /* WorldCup.swift */; };
 		7881116D249BFF2500478CDC /* WorldCupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7881116C249BFF2500478CDC /* WorldCupTableViewCell.swift */; };
 		78A4343F24A2AFCF005E114E /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4343E24A2AFCF005E114E /* GamesTableViewCell.swift */; };
+		78F6CAAF24B4CC6200F59A97 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6CAAE24B4CC6200F59A97 /* CollectionViewCell.swift */; };
+		78F6CAB324B4D25900F59A97 /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6CAB224B4D25900F59A97 /* MyCollectionViewController.swift */; };
+		78F6CAB724B503DB00F59A97 /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6CAB624B503DB00F59A97 /* CountryDetailViewController.swift */; };
+		78F6CAB924B50C3600F59A97 /* CountryDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78F6CAB824B50C3600F59A97 /* CountryDetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		78811166249AF00000478CDC /* WorldCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCup.swift; sourceTree = "<group>"; };
 		7881116C249BFF2500478CDC /* WorldCupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldCupTableViewCell.swift; sourceTree = "<group>"; };
 		78A4343E24A2AFCF005E114E /* GamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
+		78F6CAAE24B4CC6200F59A97 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		78F6CAB224B4D25900F59A97 /* MyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
+		78F6CAB624B503DB00F59A97 /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
+		78F6CAB824B50C3600F59A97 /* CountryDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +168,10 @@
 		7881116A249AF1B700478CDC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				78F6CAB224B4D25900F59A97 /* MyCollectionViewController.swift */,
 				78811161249AEF5E00478CDC /* WinnersTableViewController.swift */,
 				78811164249AEF8E00478CDC /* WorldCupViewController.swift */,
+				78F6CAB624B503DB00F59A97 /* CountryDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -177,8 +187,10 @@
 		78A4344124A2B2D7005E114E /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				78F6CAAE24B4CC6200F59A97 /* CollectionViewCell.swift */,
 				7881116C249BFF2500478CDC /* WorldCupTableViewCell.swift */,
 				78A4343E24A2AFCF005E114E /* GamesTableViewCell.swift */,
+				78F6CAB824B50C3600F59A97 /* CountryDetailTableViewCell.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -317,10 +329,14 @@
 			files = (
 				78811162249AEF5E00478CDC /* WinnersTableViewController.swift in Sources */,
 				7881112E249AE84C00478CDC /* AppDelegate.swift in Sources */,
+				78F6CAAF24B4CC6200F59A97 /* CollectionViewCell.swift in Sources */,
+				78F6CAB924B50C3600F59A97 /* CountryDetailTableViewCell.swift in Sources */,
 				78811167249AF00000478CDC /* WorldCup.swift in Sources */,
 				78A4343F24A2AFCF005E114E /* GamesTableViewCell.swift in Sources */,
+				78F6CAB324B4D25900F59A97 /* MyCollectionViewController.swift in Sources */,
 				7881116D249BFF2500478CDC /* WorldCupTableViewCell.swift in Sources */,
 				78811165249AEF8E00478CDC /* WorldCupViewController.swift in Sources */,
+				78F6CAB724B503DB00F59A97 /* CountryDetailViewController.swift in Sources */,
 				78811130249AE84C00478CDC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

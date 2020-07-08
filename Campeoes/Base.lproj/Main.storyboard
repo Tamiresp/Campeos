@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -158,7 +159,7 @@
         <scene sceneID="b8w-nH-zA6">
             <objects>
                 <navigationController id="rYU-lg-Sdh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Copas" id="lbs-oH-I6u"/>
+                    <tabBarItem key="tabBarItem" title="Copas" image="globe" catalog="system" id="lbs-oH-I6u"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="lkP-uS-cKI">
                         <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -343,22 +344,6 @@
             </objects>
             <point key="canvasLocation" x="1555.072463768116" y="16.741071428571427"/>
         </scene>
-        <!--Países-->
-        <scene sceneID="1Nr-lx-mMB">
-            <objects>
-                <viewController id="MQm-9M-jap" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1BW-Sb-vm5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Rp3-MC-xJB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Países" id="j8P-hB-NQi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kw2-Q3-z2D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-203" y="984"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6i2-Qj-lqv">
             <objects>
@@ -370,18 +355,173 @@
                     </tabBar>
                     <connections>
                         <segue destination="rYU-lg-Sdh" kind="relationship" relationship="viewControllers" id="jkd-f2-VnG"/>
-                        <segue destination="MQm-9M-jap" kind="relationship" relationship="viewControllers" id="Ehv-oX-rwG"/>
+                        <segue destination="FnW-vP-rWp" kind="relationship" relationship="viewControllers" id="YgS-Mm-2o8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="La2-vN-ZWh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1846" y="181"/>
         </scene>
+        <!--Países-->
+        <scene sceneID="liY-Gl-k7x">
+            <objects>
+                <viewController id="FnW-vP-rWp" customClass="MyCollectionViewController" customModule="Campeoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nob-Yz-UmK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1ng-HO-IcU">
+                                <rect key="frame" x="24" y="89" width="366" height="724"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Z3a-3f-zPw">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" reuseIdentifier="cell" id="auH-lU-cp4" customClass="CollectionViewCell" customModule="Campeoes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FfP-Ou-wfo">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="L0q-CC-naO">
+                                                    <rect key="frame" x="48.5" y="98" width="31" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alemanha" translatesAutoresizingMaskIntoConstraints="NO" id="Bz3-IM-xYF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="93"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Bz3-IM-xYF" secondAttribute="trailing" id="EPt-Uh-hki"/>
+                                                <constraint firstItem="L0q-CC-naO" firstAttribute="top" secondItem="Bz3-IM-xYF" secondAttribute="bottom" constant="5" id="HBs-oA-Tg1"/>
+                                                <constraint firstItem="Bz3-IM-xYF" firstAttribute="top" secondItem="FfP-Ou-wfo" secondAttribute="top" id="N3C-uo-41G"/>
+                                                <constraint firstItem="Bz3-IM-xYF" firstAttribute="leading" secondItem="FfP-Ou-wfo" secondAttribute="leading" id="lep-mF-a1a"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="country" destination="L0q-CC-naO" id="db6-ko-ZZZ"/>
+                                            <outlet property="ivcountry" destination="Bz3-IM-xYF" id="INi-r7-gpX"/>
+                                            <segue destination="La1-UV-C55" kind="presentation" id="0Cy-b0-8tZ"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="FnW-vP-rWp" id="KA3-UQ-rPW"/>
+                                    <outlet property="delegate" destination="FnW-vP-rWp" id="cIp-25-Kim"/>
+                                </connections>
+                            </collectionView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P6K-A5-zvj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Países" id="Dw8-Yd-biF"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1ng-HO-IcU" firstAttribute="top" secondItem="StA-Ww-7GA" secondAttribute="top" constant="45" id="H29-hQ-Ytl"/>
+                            <constraint firstItem="StA-Ww-7GA" firstAttribute="bottom" secondItem="1ng-HO-IcU" secondAttribute="bottom" id="NN0-By-s0J"/>
+                            <constraint firstItem="1ng-HO-IcU" firstAttribute="leading" secondItem="StA-Ww-7GA" secondAttribute="leading" constant="24" id="Pwq-3f-NuK"/>
+                            <constraint firstItem="StA-Ww-7GA" firstAttribute="trailing" secondItem="1ng-HO-IcU" secondAttribute="trailing" constant="24" id="yCy-RU-Olz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="StA-Ww-7GA"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Países" image="flag" catalog="system" id="C4o-cp-JIt"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHf-gd-O6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-682.60869565217399" y="913.39285714285711"/>
+        </scene>
+        <!--Country Detail View Controller-->
+        <scene sceneID="30s-34-bO8">
+            <objects>
+                <viewController id="La1-UV-C55" customClass="CountryDetailViewController" customModule="Campeoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jUw-XV-BVB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="srS-jq-wcR">
+                                <rect key="frame" x="342" y="760" width="48" height="30"/>
+                                <state key="normal" title="Fechar"/>
+                                <connections>
+                                    <action selector="close:" destination="La1-UV-C55" eventType="touchUpInside" id="s1A-xw-P7a"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hnf-IU-WJf">
+                                <rect key="frame" x="138" y="20" width="138" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="u0g-PW-umL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7A-QI-nGe">
+                                <rect key="frame" x="186" y="133" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copas do mundo conquistadas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knT-Yu-lTF">
+                                <rect key="frame" x="24" y="174" width="243" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lQr-C9-0rb">
+                                <rect key="frame" x="275" y="174" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62k-Fh-GO2">
+                                <rect key="frame" x="24" y="235" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="s7A-QI-nGe" firstAttribute="top" secondItem="hnf-IU-WJf" secondAttribute="bottom" constant="20" id="E2D-Fc-eOL"/>
+                            <constraint firstItem="62k-Fh-GO2" firstAttribute="leading" secondItem="Dlx-xL-vhQ" secondAttribute="leading" constant="24" id="LLa-09-s0u"/>
+                            <constraint firstItem="lQr-C9-0rb" firstAttribute="centerY" secondItem="knT-Yu-lTF" secondAttribute="centerY" id="Rca-ff-MjX"/>
+                            <constraint firstItem="62k-Fh-GO2" firstAttribute="top" secondItem="knT-Yu-lTF" secondAttribute="bottom" constant="40" id="U6Q-GP-SsE"/>
+                            <constraint firstItem="s7A-QI-nGe" firstAttribute="centerX" secondItem="Dlx-xL-vhQ" secondAttribute="centerX" id="a8u-ZU-k1y"/>
+                            <constraint firstItem="hnf-IU-WJf" firstAttribute="leading" secondItem="Dlx-xL-vhQ" secondAttribute="leading" constant="138" id="ckS-Ld-xGG"/>
+                            <constraint firstItem="knT-Yu-lTF" firstAttribute="top" secondItem="s7A-QI-nGe" secondAttribute="bottom" constant="20" id="dLE-kG-wWM"/>
+                            <constraint firstItem="Dlx-xL-vhQ" firstAttribute="trailing" secondItem="srS-jq-wcR" secondAttribute="trailing" constant="24" id="gFM-Wu-5jA"/>
+                            <constraint firstItem="lQr-C9-0rb" firstAttribute="leading" secondItem="knT-Yu-lTF" secondAttribute="trailing" constant="8" id="rOt-vh-JB8"/>
+                            <constraint firstItem="hnf-IU-WJf" firstAttribute="centerX" secondItem="Dlx-xL-vhQ" secondAttribute="centerX" id="rgF-Jz-INp"/>
+                            <constraint firstItem="hnf-IU-WJf" firstAttribute="top" secondItem="Dlx-xL-vhQ" secondAttribute="top" constant="20" id="vFW-CG-mal"/>
+                            <constraint firstItem="knT-Yu-lTF" firstAttribute="leading" secondItem="Dlx-xL-vhQ" secondAttribute="leading" constant="24" id="w0y-da-wte"/>
+                            <constraint firstItem="Dlx-xL-vhQ" firstAttribute="bottom" secondItem="srS-jq-wcR" secondAttribute="bottom" constant="18" id="wnq-az-auw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dlx-xL-vhQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cAn-vL-xbd"/>
+                    <connections>
+                        <outlet property="ivFlag" destination="hnf-IU-WJf" id="27u-cw-iVd"/>
+                        <outlet property="lbName" destination="s7A-QI-nGe" id="D6H-Ai-t2A"/>
+                        <outlet property="lbQuantity" destination="lQr-C9-0rb" id="9n1-Ew-kPt"/>
+                        <outlet property="lbYear" destination="62k-Fh-GO2" id="ojS-74-p4C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lw2-D6-S6l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="353.62318840579712" y="920.75892857142856"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Alemanha" width="138" height="93"/>
         <image name="Brasil" width="138" height="93"/>
         <image name="calendar" width="56" height="56"/>
+        <image name="flag" catalog="system" width="128" height="121"/>
+        <image name="globe" catalog="system" width="128" height="121"/>
         <image name="globe" width="56" height="56"/>
         <image name="header" width="1200" height="514"/>
     </resources>
